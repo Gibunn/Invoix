@@ -19,12 +19,17 @@ const folders = [
 	`schemas-${featureName}`,
 	`services-${featureName}`,
 	`store-${featureName}`,
+	`pages-${featureName}`,
 ];
 
 function createFolder(folderPath) {
 	if (!fs.existsSync(folderPath)) {
 		fs.mkdirSync(folderPath, { recursive: true });
-	} else {
+	}
+
+	const gitkeepPath = path.join(folderPath, ".gitkeep");
+	if (!fs.existsSync(gitkeepPath)) {
+		fs.writeFileSync(gitkeepPath, "");
 	}
 }
 
