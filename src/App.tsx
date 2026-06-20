@@ -1,5 +1,24 @@
-import { Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
+import ForgotPassword from "./features/forgot-password/pages-forgot-password/ForgotPassword";
+import Register from "./features/register/pages-register/Register";
+import ResetPassword from "./features/reset-password/pages-reset-password/ResetPassword";
+import SignIn from "./features/sign-in/pages-sign-in/SignIn";
+import AuthLayout from "./layouts/AuthLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 export default function App() {
-	return <Routes></Routes>;
+	return (
+		<Routes>
+			<Route path="/" element={<Navigate to="/dashboard" replace />} />
+
+			<Route element={<AuthLayout />}>
+				<Route path="/sign-in" element={<SignIn />} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/forgot-password" element={<ForgotPassword />} />
+				<Route path="/reset-password" element={<ResetPassword />} />
+			</Route>
+
+			<Route path="/dashboard" element={<DashboardLayout />}></Route>
+		</Routes>
+	);
 }
