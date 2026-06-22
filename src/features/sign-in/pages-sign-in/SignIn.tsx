@@ -1,3 +1,5 @@
+import { Input } from "@/common/Input";
+
 export default function SignIn() {
 	return (
 		<div className="w-[45%] p-12 bg-white flex flex-col items-center justify-center h-screen">
@@ -18,10 +20,7 @@ export default function SignIn() {
 					>
 						Email
 					</label>
-					<input
-						id="email"
-						className="h-10 px-3 py-2.5 bg-violet-100/50 rounded-xl outline-[0.74px] outline-offset-[-0.74px] outline-zinc-950/5"
-					/>
+					<Input id="email" />
 				</div>
 				<div className="flex flex-col gap-1.5 w-full">
 					<label
