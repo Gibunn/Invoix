@@ -1,8 +1,9 @@
 import { Input } from "@/common/Input";
+import { InputPassword } from "@/common/InputPassword";
 
 export default function SignIn() {
 	return (
-		<div className="w-[45%] p-12 bg-white flex flex-col items-center justify-center h-screen">
+		<div className="w-[35%] p-12 bg-white flex flex-col items-center justify-center h-screen">
 			<div className="mb-7 w-full">
 				<h2 className="text-zinc-950 text-2xl font-bold font-['Plus_Jakarta_Sans'] mb-1">
 					Selamat datang kembali
@@ -20,7 +21,7 @@ export default function SignIn() {
 					>
 						Email
 					</label>
-					<Input id="email" />
+					<Input id="email" placeholder="Masukkan email" />
 				</div>
 				<div className="flex flex-col gap-1.5 w-full">
 					<label
@@ -29,10 +30,7 @@ export default function SignIn() {
 					>
 						Password
 					</label>
-					<input
-						id="password"
-						className="h-10 px-3 py-2.5 bg-violet-100/50 rounded-xl outline-[0.74px] outline-offset-[-0.74px] outline-zinc-950/5"
-					/>
+					<InputPassword id="password" placeholder="Masukkan password" />
 				</div>
 			</form>
 		</div>
