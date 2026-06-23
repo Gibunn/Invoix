@@ -4,10 +4,12 @@ import ForgotPasswordForm from "../components-forgot-password/ForgotPasswordForm
 import ForgotPasswordHeader from "../components-forgot-password/ForgotPasswordHeader";
 
 export default function ForgotPassword() {
+	const sent = false;
+
 	return (
 		<AuthFormLayout>
-			<ForgotPasswordHeader />
-			<ForgotPasswordForm />
+			<ForgotPasswordHeader sent={sent} />
+			<ForgotPasswordForm sent={sent} />
 			<ForgotPasswordFooter />
 		</AuthFormLayout>
 	);
