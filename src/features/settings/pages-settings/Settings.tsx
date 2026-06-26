@@ -1,10 +1,11 @@
-import { TabGroup, TabList, TabPanel } from "@headlessui/react";
+import { TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { TabItem } from "../../../common/TabItem";
+import BusinessProfile from "../components-settings/BusinessProfile/BusinessProfile";
 
 export default function Settings() {
 	return (
 		<TabGroup className="p-5">
-			<TabList className="flex gap-1 bg-white w-fit p-1 rounded-xl">
+			<TabList className="flex gap-1 bg-white w-fit p-1 rounded-xl mb-4">
 				<TabItem>Profil Bisnis</TabItem>
 				<TabItem>Info Pembayaran</TabItem>
 				<TabItem>Preferensi Invoice</TabItem>
@@ -12,7 +13,11 @@ export default function Settings() {
 				<TabItem>Akun</TabItem>
 			</TabList>
 
-			<TabPanel></TabPanel>
+			<TabPanels>
+				<TabPanel>
+					<BusinessProfile />
+				</TabPanel>
+			</TabPanels>
 		</TabGroup>
 	);
 }
