@@ -42,7 +42,7 @@ export default function PaymentInformation() {
 					/>
 				</div>
 
-				<Button className="px-4 w-40 mt-5 text-sm">Simpan Perubahan</Button>
+				<Button className="px-4 w-40 text-sm">Simpan Perubahan</Button>
 			</form>
 		</Container>
 	);
