@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import ClientHeader from "../components-client/client-header/ClientHeader";
-import ClientTable from "../components-client/client-table/ClientTable";
+import ClientHeader from "../components-client/ClientHeader/ClientHeader";
+import ClientTable from "../components-client/ClientTable/ClientTable";
 import type { Client as ClientType } from "../models-client/model-client";
 
 const MOCK_CLIENTS: ClientType[] = Array.from({ length: 53 }, (_, i) => ({
