@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import ClientCreate from "../components-client/ClientCreate/ClientCreate";
 import ClientHeader from "../components-client/ClientHeader/ClientHeader";
 import ClientTable from "../components-client/ClientTable/ClientTable";
 import type { Client as ClientType } from "../models-client/model-client";
@@ -35,6 +36,7 @@ export default function Client() {
 
 	return (
 		<div className="p-5">
+			<ClientCreate />
 			<ClientHeader />
 			<ClientTable
 				data={paginatedData}

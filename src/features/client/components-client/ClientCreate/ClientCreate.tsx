@@ -1,3 +1,5 @@
+import ClientCreateDialog from "./ClientCreateDialog";
+
 export default function ClientCreate() {
-	return <div></div>;
+	return <ClientCreateDialog />;
 }
