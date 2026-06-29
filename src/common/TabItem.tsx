@@ -27,7 +27,7 @@ export function TabItem({
 	className?: string;
 }) {
 	return (
-		<Tab className="outline-none">
+		<Tab className="outline-none" as="div">
 			{({ hover, selected }) => (
 				<CustomTabItem
 					className={`
