@@ -3,6 +3,7 @@ import {
 	getCoreRowModel,
 	useReactTable,
 } from "@tanstack/react-table";
+import { useNavigate } from "react-router";
 import TablePagination, {
 	type TablePaginationProps,
 } from "@/common/TablePagination";
@@ -16,6 +17,8 @@ export default function ClientTable({
 	data: Client[];
 	pagination: TablePaginationProps;
 }) {
+	const navigate = useNavigate();
+
 	const table = useReactTable({
 		data,
 		columns: clientColumns,
@@ -53,6 +56,9 @@ export default function ClientTable({
 					{table.getRowModel().rows.map((row) => (
 						<tr
 							key={row.id}
+							onClick={() =>
+								navigate(`/dashboard/client/${row.original.id}`)
+							}
 							className="border-b border-gray-50 hover:bg-gray-50 bg-white cursor-pointer transition-colors text-[#6B6B80]"
 						>
 							{row.getVisibleCells().map((cell) => (

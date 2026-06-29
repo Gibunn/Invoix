@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router";
 import Client from "./features/client/pages-client/Client";
+import ClientDetail from "./features/client/pages-client/ClientDetail";
 import Dashboard from "./features/dashboard/pages-dashboard/Dashboard";
 import ForgotPassword from "./features/forgot-password/pages-forgot-password/ForgotPassword";
 import Invoice from "./features/invoice/pages-invoice/Invoice";
@@ -26,6 +27,7 @@ export default function App() {
 				<Route index element={<Dashboard />} />
 				<Route path="invoice" element={<Invoice />} />
 				<Route path="client" element={<Client />} />
+				<Route path="client/:id" element={<ClientDetail />} />
 				<Route path="settings" element={<Settings />} />
 			</Route>
 		</Routes>
